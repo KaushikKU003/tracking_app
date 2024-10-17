@@ -13,10 +13,7 @@ const io = socketIo(server, {
   }
 });
 
-app.use(cors({
-  origin: 'https://vehiceltracking.vercel.app/', // allow your frontend
-  credentials: true
-}));
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Horn Notification Backend');
