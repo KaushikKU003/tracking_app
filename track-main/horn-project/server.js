@@ -7,14 +7,14 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: 'http://localhost:3000', // allow your frontend to connect
+    origin: 'https://vehiceltracking.vercel.app/', // allow your frontend to connect
     methods: ['GET', 'POST'],
     credentials: true
   }
 });
 
 app.use(cors({
-  origin: 'http://localhost:3000', // allow your frontend
+  origin: 'https://vehiceltracking.vercel.app/', // allow your frontend
   credentials: true
 }));
 
